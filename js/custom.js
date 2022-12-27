@@ -36,3 +36,15 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 }
+
+(function () {
+  var counter = 0;
+  setInterval(function () {
+    var liveText = document.querySelector('#live-section-text');
+    console.log('counter', liveText.innerHTML);
+    liveText.innerHTML = counter;
+    counter += 10;
+
+    liveText.innerHTML = `Site is up for ${counter} seconds.`;
+  }, 10000);
+})();

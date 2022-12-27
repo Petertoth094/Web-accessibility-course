@@ -105,6 +105,11 @@
                 class="navbar-burger burger"
                 data-target="navbarMenu"
                 tabindex="0"
+                role="button"
+                aria-haspopup="true"
+                aria-owns="main-navbar-menu"
+                aria-expanded="false"
+                aria-label="toggle mobile menu"
               >
                 <span></span>
                 <span></span>
@@ -112,10 +117,19 @@
               </span>
             </div>
 
-            <div id="navbarMenu" class="navbar-menu">
+            <div
+              id="navbarMenu"
+              class="navbar-menu"
+              id="main-navbar-menu"
+              role="menu"
+            >
               <div class="navbar-end">
                 <span class="navbar-item">
-                  <a class="button is-white is-outlined" href="#">
+                  <a
+                    class="button is-white is-outlined"
+                    href="#"
+                    role="menuitem"
+                  >
                     <span class="icon">
                       <i class="fa fa-home" aria-hidden="true"></i>
                     </span>
@@ -123,7 +137,11 @@
                   </a>
                 </span>
                 <span class="navbar-item">
-                  <a class="button is-white is-outlined" href="#">
+                  <a
+                    class="button is-white is-outlined"
+                    href="#"
+                    role="menuitem"
+                  >
                     <span class="icon">
                       <i class="fab fa-superpowers" aria-hidden="true"></i>
                     </span>
@@ -135,6 +153,7 @@
                     class="button is-white is-outlined"
                     href="#"
                     target="_blank"
+                    role="menuitem"
                   >
                     <span class="icon">
                       <i class="fa fa-book" aria-hidden="true"></i>
@@ -148,6 +167,7 @@
                     class="button is-white is-outlined"
                     href="#"
                     target="_blank"
+                    role="menuitem"
                   >
                     <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
@@ -187,6 +207,7 @@
                       type="email"
                       name="newsletter"
                       id="newsletter"
+                      aria-placeholder="Your email address"
                     />
                   </p>
                   <p class="control">
@@ -212,12 +233,14 @@
             <ol>
               <li><a href="#">Web accessibility </a></li>
               <li>
-                <a href="">About us </a>
+                <a href="#">About us </a>
               </li>
-              <li><a href="">Upcoming events</a></li>
-              <li><a href="">Forum</a></li>
+              <li><a href="#">Upcoming events</a></li>
+              <li><a href="#">Forum</a></li>
               <li>
-                <a href="" aria-current="page" class="active-tab">Contact us</a>
+                <a href="#" aria-current="page" class="active-tab"
+                  >Contact us</a
+                >
               </li>
             </ol>
           </nav>
@@ -483,9 +506,17 @@
             aria-labelledby="topics-menu"
           >
             <h2 id="topics-menu" class="visually-hidden">Topic navigation</h2>
-            <ul>
-              <li data-target="pane-1" id="1" class="is-active">
-                <button role="button" tabindex="0">
+
+            <ul role="tablist" aria-labelledby="topics-menu">
+              <li
+                data-target="pane-1"
+                id="1"
+                aria-controls="pane-1"
+                class="is-active"
+                role="tab"
+                aria-selected="true"
+              >
+                <button tabindex="0">
                   <span class="icon is-small"
                     ><i class="fa fa-image" aria-hidden="true"></i
                   ></span>
@@ -494,16 +525,30 @@
                   </div>
                 </button>
               </li>
-              <li data-target="pane-3" id="3">
-                <button role="button" tabindex="0">
+              <li
+                data-target="pane-3"
+                id="3"
+                role="tab"
+                aria-controls="pane-3"
+                aria-selected="false"
+                tabindex="0"
+              >
+                <button role="button" tabindex="0" aria-controls="tab-content">
                   <span class="icon is-small"
                     ><i class="fab fa-superpowers" aria-hidden="true"></i
                   ></span>
                   <span class="color-dark">Team</span>
                 </button>
               </li>
-              <li data-target="pane-4" id="4">
-                <button role="button" tabindex="0">
+              <li
+                data-target="pane-4"
+                id="4"
+                role="tab"
+                aria-controls="pane-4"
+                aria-selected="false"
+                tabindex="0"
+              >
+                <button role="button" tabindex="0" aria-controls="tab-content">
                   <span class="icon is-small"
                     ><i class="fa fa-film" aria-hidden="true"></i
                   ></span>
@@ -515,8 +560,8 @@
         </div>
       </section>
 
-      <div class="tab-content container">
-        <div class="tab-pane is-active level" id="pane-1">
+      <div class="tab-content container" id="tab-content">
+        <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
           <div class="container">
             <div class="columns features">
               <div class="column is-6">
@@ -583,7 +628,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-3">
+        <div class="tab-pane" id="pane-3" role="tabpanel">
           <div class="columns medias">
             <div class="column">
               <div class="media">
@@ -630,7 +675,7 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="pane-4">
+        <div class="tab-pane" id="pane-4" role="tabpanel">
           <div class="columns is-centered">
             <div class="column is-three-quarters">
               <h2 class="title has-text-centered">Inspired video</h2>
@@ -888,6 +933,9 @@
                 placeholder="Your name"
                 name="name"
                 id="name"
+                aria-placeholder="Your name"
+                aria-invalid="false"
+                required
               />
             </div>
           </div>
@@ -901,6 +949,9 @@
                 name="username"
                 id="username"
                 placeholder="Your username"
+                aria-placeholder="Your username"
+                aria-invalid="false"
+                required
               />
               <span class="icon is-small is-left">
                 <i class="fas fa-user" aria-hidden="true"></i>
@@ -923,6 +974,8 @@
                 name="email"
                 id="email"
                 required
+                aria-placeholder="Your email address"
+                aria-invalid="false"
               />
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -954,6 +1007,9 @@
                 placeholder="Textarea"
                 name="message"
                 id="message"
+                aria-placeholder="Your message"
+                aria-invalid="false"
+                required
               ></textarea>
             </div>
           </div>
@@ -961,7 +1017,7 @@
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" required aria-invalid="false" />
                 I agree to the
                 <a href="#" target="_blank" class="text-link"
                   >terms and conditions
@@ -1000,7 +1056,14 @@
         </form>
       </div>
     </aside>
-
+    <aside
+      aria-labelledby="live-section-title"
+      id="live-section"
+      aria-live="polite"
+    >
+      <h2 id="live-section-title">Live section</h2>
+      <p id="live-section-text">Site is up for 0 seconds.</p>
+    </aside>
     <footer class="footer">
       <div class="container">
         <div class="columns">
@@ -1081,7 +1144,16 @@
       </div>
     </footer>
 
-    <div id="modal-card" class="modal modal-fx-3dSlit">
+    <div
+      id="modal-card"
+      class="modal modal-fx-3dSlit"
+      role="dialog"
+      aria-labelledby="social-media-post-modal"
+      aria-modal="true"
+    >
+      <span class="visually-hidden" id="social-media-post-modal">
+        Jane Doe's social media post</span
+      >
       <div class="modal-background"></div>
       <div class="modal-content is-tiny">
         <div class="card">
@@ -1134,7 +1206,14 @@
       </button>
     </div>
 
-    <div id="modal-image1" class="modal modal-fx-3dSlit">
+    <div
+      id="modal-image1"
+      class="modal modal-fx-3dSlit"
+      role="dialog"
+      aria-labelledby="random-img-modal"
+      aria-modal="true"
+    >
+      <span class="visually-hidden" id="random-img-modal"> random image </span>
       <div class="modal-background"></div>
       <div class="modal-content is-huge is-image">
         <img src="https://source.unsplash.com/random/?sig=1" alt="" />

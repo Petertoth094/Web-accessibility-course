@@ -176,3 +176,102 @@ li {
   height: 40px;
   background-size: contain;
 }
+
+.color-dark {
+  color: #000 !important;
+}
+
+.color-light {
+  color: #fff !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+
+.visually-hidden:focus {
+  height: auto;
+  width: auto;
+  clip: auto;
+}
+
+
+.navbar-burger span {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-menu {
+    background-color: transparent;
+  }
+  .navbar-menu .button {
+    width: 100%;
+  }
+}
+
+input:focus,
+a:focus,
+select:focus,
+textarea:focus,
+button:focus,
+span:focus {
+  border-radius: 2px !important;
+  outline: 0 !important;
+  box-shadow: 0 0 2px 1.5px #fff, 0 0 3px 3px #000 !important;
+}
+
+.visible-when-focused:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+  margin: auto;
+}
+
+.bypass-block-target:focus {
+  outline: none;
+}
+
+.bypass-block-target:focus:target,
+[tabindex="0"]:focus,
+a:focus,
+button:focus,
+input:focus {
+  outline: solid 6px orange;
+}
+
+.help.is-danger {
+  background-color: red;
+  font-size: 16px;
+}
+
+.help.is-success {
+  background-color: #90ee90;
+  font-size: 16px;
+}
+
+.bypass-block-link {
+  position: absolute;
+  text-decoration: none;
+  background: #ffffcc;
+  padding: 0.2em;
+  z-index: 10;
+  color: #000;
+}
+
+.active-tab {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.fieldset {
+  border: 0;
+}

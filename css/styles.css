@@ -206,6 +206,10 @@ li {
   background-color: #fff;
 }
 
+.text-link {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 992px) {
   .navbar-menu {
     background-color: transparent;

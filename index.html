@@ -506,53 +506,56 @@
             </div>
           </div>
 
-          <ul
+          <div
             role="tablist"
             aria-label="topics menu"
             class="tabs is-boxed is-centered main-menu"
             id="nav"
           >
-            <li
+            <button
+              id="tab-1"
+              type="button"
               data-target="pane-1"
-              id="1"
-              class="is-active"
               role="tab"
               aria-selected="true"
               aria-controls="pane-1"
               tabindex="0"
+              class="tabs-button"
             >
               <span class="icon is-small"
                 ><i class="fa fa-image" aria-hidden="true"></i
               ></span>
-              <span class="color-dark">Pictures</span>
-            </li>
-            <li
-              data-target="pane-3"
+              <span>Pictures</span>
+            </button>
+            <button
               id="3"
+              type="button"
+              data-target="pane-3"
               role="tab"
               aria-controls="pane-3"
               aria-selected="false"
-              tabindex="-1"
+              class="tabs-button"
             >
               <span class="icon is-small"
                 ><i class="fab fa-superpowers" aria-hidden="true"></i
               ></span>
-              <span class="color-dark">Team</span>
-            </li>
-            <li
+              <span clas="color-dark">Team</span>
+            </button>
+            <button
+              id="tab-4"
+              type="button"
               data-target="pane-4"
-              id="4"
               role="tab"
               aria-controls="pane-4"
               aria-selected="false"
-              tabindex="-1"
+              class="tabs-button"
             >
               <span class="icon is-small"
                 ><i class="fa fa-film" aria-hidden="true"></i
               ></span>
-              <span class="color-dark">Video</span>
-            </li>
-          </ul>
+              <span>Video</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -561,7 +564,7 @@
           class="tab-pane is-active level"
           id="pane-1"
           role="tabpanel"
-          aria-labelledby="1"
+          aria-labelledby="tab-1"
           tabindex="0"
         >
           <div class="container">
@@ -634,7 +637,7 @@
           class="tab-pane"
           id="pane-3"
           role="tabpanel"
-          aria-labelledby="3"
+          aria-labelledby="tab-3"
           tabindex="0"
         >
           <div class="columns medias">
@@ -693,7 +696,7 @@
           class="tab-pane"
           id="pane-4"
           role="tabpanel"
-          aria-labelledby="4"
+          aria-labelledby="tab-4"
           tabindex="0"
         >
           <div class="columns is-centered">
@@ -1226,6 +1229,7 @@
               target="_blank"
               href="http://opensource.org/licenses/mit-license.php"
               class="color-dark"
+              aria-label="MIT license information"
               >MIT <i class="fas fa-external-link-alt" aria-hidden="true"></i>
               <span class="visually-hidden">will open in a new tab</span></a
             >.

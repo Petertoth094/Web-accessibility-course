@@ -5,19 +5,13 @@
 }
 
 .tabs {
-  margin-bottom: -1px !important;
   position: relative;
+  margin: 0 2em 0  2em !important;
 }
 .tab-content {
   padding: 2rem;
 }
-.tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
-  display: block;
-  position: relative;
-}
+
 .is-active {
   display: initial;
 }
@@ -254,12 +248,14 @@ input:focus {
 
 .help.is-danger {
   background-color: red;
-  font-size: 16px;
+}
+
+.help {
+  font-size: 1em;
 }
 
 .help.is-success {
   background-color: #90ee90;
-  font-size: 16px;
 }
 
 .bypass-block-link {
@@ -278,4 +274,23 @@ input:focus {
 
 .fieldset {
   border: 0;
+}
+
+.tabs-button {
+  border: none;
+  border-radius: 2px;
+  background-color: #209cee;
+  color: #fff;
+  font-size: 1em;
+  margin: 6px 6px 0 6px;
+}
+
+[role="tab"][aria-selected="true"] {
+  background-color: #fff;
+  padding: 6px 12px;
+  color: #000;
+}
+
+[role="tabpanel"].is-hidden {
+  display: none;
 }

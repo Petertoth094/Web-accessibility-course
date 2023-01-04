@@ -121,7 +121,8 @@
               id="navbarMenu"
               class="navbar-menu"
               id="main-navbar-menu"
-              role="menu"
+              role="menubar"
+              aria-labelledby="page-title"
             >
               <div class="navbar-end">
                 <span class="navbar-item">
@@ -141,12 +142,39 @@
                     class="button is-white is-outlined"
                     href="#"
                     role="menuitem"
+                    aria-haspopup="true"
+                    aria-expanded="false"
                   >
                     <span class="icon">
                       <i class="fab fa-superpowers" aria-hidden="true"></i>
                     </span>
-                    <span>Examples</span>
+                    <span>Administration</span>
+                    <span class="icon">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
                   </a>
+                  <ul
+                    role="menu"
+                    aria-label="Administration"
+                    class="header-submenu"
+                  >
+                    <li role="none" class="header-submenu-item">
+                      <a href="#" role="menuitem">Administration</a>
+                    </li>
+                    <li role="none" class="header-submenu-item">
+                      <a href="#" role="menuitem">Team Settings</a>
+                    </li>
+                    <li role="none" class="header-submenu-item">
+                      <a href="#" role="menuitem">Manage Your Team</a>
+                    </li>
+                    <li role="none" class="header-submenu-item">
+                      <a href="#" role="menuitem">Invitations</a>
+                    </li>
+                    <li role="separator"></li>
+                    <li role="none" class="header-submenu-item">
+                      <a href="#" role="menuitem">Authentication</a>
+                    </li>
+                  </ul>
                 </span>
                 <span class="navbar-item">
                   <a
@@ -535,6 +563,7 @@
               aria-controls="pane-3"
               aria-selected="false"
               class="tabs-button"
+              tabindex="-1"
             >
               <span class="icon is-small"
                 ><i class="fab fa-superpowers" aria-hidden="true"></i
@@ -549,6 +578,7 @@
               aria-controls="pane-4"
               aria-selected="false"
               class="tabs-button"
+              tabindex="-1"
             >
               <span class="icon is-small"
                 ><i class="fa fa-film" aria-hidden="true"></i
